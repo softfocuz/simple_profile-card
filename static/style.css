@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Voces&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0E14;
+    font-family: 'Voces',Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+    margin: 100px 20px 20px 20px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+    margin: 0 auto;
+    font-size: clamp(0.85rem, 2.8cqw, 1rem);
+    padding: 10px 25px;
+    width: 40%;
+    min-width: 320px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    border: none;
+    background-color: #111827;
+    box-shadow:
+        inset 0 12px 24px rgba(59, 130, 246, 0.15),
+        0 4px 16px rgba(0, 0, 0, 0.55),
+        0 8px 24px rgba(0, 0, 0, 0.6);
+    transform: translateX(-100%) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%) scale(0.95);
+        opacity: 0;
+        visibility: visible;
+    }
+    60% {
+        transform: translateX(10%) scale(1.02);
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-5%) scale(0.99);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin: 20px; 
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #3B82F6;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.contact a:hover {
+    color: #60A5FA;
+    text-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
+}
+
+h3 {
+    color: #F9FAFB;
+} 
+
+h4 {
+    color: #E5E7EB;
+}
+
+h5 {
+    color: #CBD5E1;
+}
+
+.name {
+    font-size: 1.4em;
+}
+
+.role {
+    font-size: 0.9em;
+}
+
+.about h4 {
+    font-size: 1.1em;
+}
+
+ul li a {
+    font-size: 0.9em;
+}
+
+.sub-con {
+    text-align: left;
+    color: #9CA3AF;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    margin-left: 20px;
+    gap: 30px;
+}
